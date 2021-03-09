@@ -21,3 +21,19 @@ text_string = text_string.replace("Ã","á")
 text_string = text_string.replace("\n","")
 
 print(text_string)
+
+
+# on va maintenant creer une fonction qui nous permetra de nettoyer la ponctuation directement.
+
+def clean_text(string_value):
+  clean_value = string_value.replace(",","")
+  clean_value = clean_value.replace(".","")
+  clean_value = clean_value.replace("'","")
+  clean_value = clean_value.replace("Ã©","e")
+  clean_value = clean_value.replace("Ã","á")
+  clean_value = clean_value.replace("\n","")
+  return(clean_value)
+
+
+text_ok = clean_text(text_string)
+print(text_ok)
