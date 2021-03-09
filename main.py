@@ -32,8 +32,13 @@ def clean_text(string_value):
   clean_value = clean_value.replace("Ã©","e")
   clean_value = clean_value.replace("Ã","á")
   clean_value = clean_value.replace("\n","")
+  # et si on enlever les Majuscule ?
+  clean_value= clean_value.lower()
+  #
   return(clean_value)
 
 
 text_ok = clean_text(text_string)
 print(text_ok)
+
+
